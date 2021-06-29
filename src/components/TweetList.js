@@ -11,7 +11,7 @@ function TweetList(props) {
         <div className='tweet-wrapper'>
 			{appContext.tweetList !== [] ? (
 				<ul className='tweet-list'>
-					{appContext.tweetList.sort((a, b) => a.date < b.date)
+					{appContext.tweetList.sort((a, b)=>b.date.localeCompare(a.date))
 					.map((tweet) => (
 						<li key={tweet.id} className='tweet' >
                             <div className='header-tweet'>
